@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Multi-step form</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img class="background" src="./assets/images/bg-sidebar-desktop.svg">
+    <div class="steps-section">
+      <!-- Sidebar start -->
+      <div class="steps">
+        <span class="form-number">1</span>
+        <div class="steps-desp">
+          <p class="steps-num">STEP 1</p>
+          <h5 class="steps-title">YOUR INFO</h5>
+        </div>
+      </div>
+      <div class="steps">
+        <span class="form-number">2</span>
+        <div class="steps-desp">
+          <p class="steps-num">STEP 2</p>
+          <h5 class="steps-title">SELECT PLAN</h5>
+        </div>
+      </div>
+      <div class="steps">
+        <span class="form-number">3</span>
+        <div class="steps-desp">
+          <p class="steps-num">STEP 3</p>
+          <h5 class="steps-title">ADD-ONS</h5>
+        </div>
+      </div>
+      <div class="steps">
+        <span class="form-number">4</span>
+        <div class="steps-desp">
+          <p class="steps-num">STEP 4</p>
+          <h5 class="steps-title">SUMMARY</h5>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar end -->
+    <!-- Step 1 start -->
+    <div class="flipper">
+      <div class="form-section">
+        <div id="sub-form-1" class="sub-form-1">
+          <h4 class="main-header">Personal info</h4>
+          <p class="para">Please provide your name, email address, and phone number.</p>
+          <div class="full-header">
+            <h6 class="header">Name</h6>
+            <p class="warnings"></p>
+          </div>
+          <input id="full-input" class="full-input" type="text" placeholder="e.g. Stephen King">
+          <div class="full-header">
+            <h6 class="header">Email Address</h6>
+            <p class="warnings"></p>
+          </div>
+          <input class="full-input" type="text" placeholder="e.g. stephenking@lorem.com">
+          <div class="full-header">
+            <h6 class="header">Phone Number</h6>
+            <p class="warnings"></p>
+          </div>
+          <input class="full-input" type="number" placeholder="e.g. +1 234 567 890" maxlength="10">
+        </div>
+        <!-- Step 1 end -->
+        <!-- Step 2 start -->
+        <div id="sub-form-2" class="sub-form-2">
+          <h4 class="main-header">Select your plan</h4>
+          <p class="para">You have the option of monthly or yearly billing.</p>
+          <div class="all-plans">
+            <div class="plan">
+              <img class="plan-icon" src="assets/images/icon-arcade.svg" alt="" srcset="">
+              <h6 class="plan-name">Arcade</h6>
+              <p class="plan-cost">+<span class="step3period">$9/mo</span></p>
+              <p class="special"></p>
+            </div>
+            <div class="plan">
+              <img class="plan-icon" src="assets/images/icon-advanced.svg" alt="" srcset="">
+              <h6 class="plan-name">Advanced</h6>
+              <p class="plan-cost">+<span class="step3period">$12/mo</span></p>
+              <p class="special"></p>
+            </div>
+            <div class="plan">
+              <img class="plan-icon" src="assets/images/icon-pro.svg" alt="" srcset="">
+              <h6 class="plan-name">Pro</h6>
+              <p class="plan-cost">+<span class="step3period">$15/mo</span></p>
+              <p class="special"></p>
+            </div>
+          </div>
+          <!-- Step 2 end -->
+          <div class="plan-period">
+            <p class="plan-duration" style="color: hsl(213, 96%, 18%); opacity: 1;">Monthly</p>
+            <label class="switch">
+              <input id="switch-btn" type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <p class="plan-duration">Yearly</p>
+          </div>
+          <p class="warnings2"></p>
+        </div>
+        <!-- Step 3 start -->
+        <div id="sub-form-3" class="sub-form-3">
+          <h4 class="main-header"> Pick add-ons</h4>
+          <p class="para">Add-ons help enhance your gaming experience.</p>
+          <div class="add-on">
+            <input class="check-box" type="checkbox" name="" id="">
+            <div class="add-on-title">
+              <h6 class="add-on-name">Online service</h6>
+              <p class="add-on-sub">Access to multiplayer games</p>
+            </div>
+            <p class="add-on-cost">+<span class="step3period">$1/mo</span></p>
+          </div>
+          <div class="add-on">
+            <input class="check-box" type="checkbox" name="" id="">
+            <div class="add-on-title">
+              <h6 class="add-on-name">Larger storage</h6>
+              <p class="add-on-sub">Extra 1TB of cloud save</p>
+            </div>
+            <p class="add-on-cost">+<span class="step3period">$2/mo</span></p>
+          </div>
+          <div class="add-on">
+            <input class="check-box" type="checkbox" name="" id="">
+            <div class="add-on-title">
+              <h6 class="add-on-name">Customizable Profile</h6>
+              <p class="add-on-sub">Custom theme on your profile</p>
+            </div>
+            <p class="add-on-cost">+<span class="step3period">$2/mo</span></p>
+          </div>
+        </div>
+        <!-- Step 3 end -->
+        <!-- Step 4 start -->
+        <div id="sub-form-4" class="sub-form-4">
+          <h4 class="main-header">Finishing up</h4>
+          <p class="para">Double-check everything looks OK before confirming.</p>
+          <div class="all-items">
+            <div class="total-items">
+              <div class="total-info">
+                <h6 class="total-name"><span class="mode">Arcade(<span id="scheme">Monthly</span>)</span></h6>
+                <p class="total-sub">change</p>
+              </div>
+              <p onclick="Change()" id="main-cost" class="main-cost"><span class="step3period">$9/mo</span></p>
+            </div>
+            <hr>
+            <div class="all-sub-items"></div>
+          </div>
+          <div class="final-total">
+            <p class="final-total-name">Total</p>
+            <p id="total-cost" class="total-cost"><span class="step3period">$0/mo</span></p>
+          </div>
+        </div>
+        <!-- Step 4 end -->
+        <!-- Step 5 start -->
+        <div id="thankyou" class="thankyou">
+          <div class="thankyou-contents">
+            <img src="assets/images/icon-thank-you.svg" alt="" srcset="">
+            <h1 class="thankyou-h1">Thank you!</h1>
+            <p class="thankyou-p">Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at rk@gmail.com.</p>
+          </div>
+        </div>
+        <!-- Step 5 end -->
+        <div class="btn">
+          <button id="go-back" onclick="goBack()">Go Back</button>
+          <button id="next-step" onclick="nextForm()">Next Step</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
